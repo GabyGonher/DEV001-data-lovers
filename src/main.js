@@ -10,16 +10,6 @@ pokemonName.forEach((pokemon) => {
     contenedor.insertAdjacentHTML('beforebegin', tarjeta)
 });
 
-
-
-
-
-
-
-
-
-
-
 // const pokemonName = data.pokemon
 // pokemonName.forEach((pokemon) =>
 // console.log(pokemon)
