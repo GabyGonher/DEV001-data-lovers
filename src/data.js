@@ -1,6 +1,5 @@
 
 import data from './data/pokemon/pokemon.js';
-
 const cadaPokemon = data.pokemon
 
 
