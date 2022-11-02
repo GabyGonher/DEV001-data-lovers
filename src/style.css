@@ -1,82 +1,137 @@
-body {
-    background: linear-gradient(90deg, #6652C3,#5AE6E0);
-}
+ body {
+     background: linear-gradient(90deg, #6652C3, #5AE6E0);
+ }
 
-#titulo{
-    font-family: 'Pokemon Solid', sans-serif;
-    font-size: 10vw;
-    color: #6652C3;
-    text-shadow: 0 0 15px #6652C3, 0 0 30px #6652C3, 0 0 30px #6652C3, 0 0 30px #6652C3;
-    -webkit-text-stroke: 2px aqua; 
-}  
+ #titulo {
+     font-family: 'Pokemon Solid', sans-serif;
+     font-size: 10vw;
+     color: #6652C3;
+     text-shadow: 0 0 15px #6652C3, 0 0 30px #6652C3, 0 0 30px #6652C3, 0 0 30px #6652C3;
+     -webkit-text-stroke: 2px #5AE6E0;
+ }
 
-#pk{
-    text-align: center;
-}
+ #pk {
+     align-content: center;
+     text-align: center;
+ }
 
-.contenedor {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-auto-rows: minmax(100px, auto);
-    grid-gap: 20px;
-}
+ .contenedor {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+     grid-auto-rows: minmax(100px, auto);
+     grid-gap: 20px;
+ }
 
-.card{
-    position: relative;
-    background-color: #FECC51;
-    border-color:#130F26;
-    border-style:solid;
-    border-radius:6px;
-    padding: 10%;
-    max-width: 100%;
-    max-height: 1000%;
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
-}
+ .card {
+     position: relative;
+     background-color: #FECC51;
+     border-color: #130F26;
+     border-style: solid;
+     border-radius: 6px;
+     padding: 10%;
+     max-width: 100%;
+     max-height: 1000%;
+     text-align: center;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-.name {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 20px;
-    letter-spacing: 3px;
-}
+ }
 
-.pk_num {
-    background-color: rgba(0, 0, 0, 0.1);
-    padding: 5px 10px;
-    border-radius: 10px;
-    font-size: 0.8em;
-}
+ .name {
+     text-transform: uppercase;
+     font-weight: bold;
+     font-size: 20px;
+     letter-spacing: 3px;
+ }
 
-.card:hover {
-    background-color: #F4AF01; 
-    box-shadow: #5AE6E0;
-    color: black;
-    font-weight: bold;
-    margin-top: -10px;
-    margin-bottom: 10px;
-    transition: 0s;
-    filter: grayscale (0%);
-    opacity: 1;
-    /* transform: perspective(500px) rotateY(180deg); */
-}
+ .pk_num {
+     background-color: rgba(0, 0, 0, 0.1);
+     padding: 5px 10px;
+     border-radius: 10px;
+     font-size: 0.8em;
+ }
 
-/* .card .front {
-    position: absolute;
-    transform: perspective(600px) rotateY(0deg);
-    backface-visibility: hidden;
-} 
+ .card:hover {
+     background-color: gold;
+     box-shadow: #5AE6E0;
+     color: black;
+     font-weight: bold;
+     margin-top: -10px;
+     margin-bottom: 10px;
+     transition: 0s;
+     filter: grayscale (0%);
+     opacity: 1;
 
-.card .back {
-    position:inherit;
-    transform: perspective(600px) rotateY(180deg);
-    backface-visibility: hidden;
-}
+ }
 
-.card:hover .front{
-    transform: perspective(500px) rotateY(180deg);
-}
+ .encabezado {
+     background-color: #130F26;
+     height: 60px;
+     position: fixed;
+     width: 100%;
+     top: 0;
+     left: 0;
+ }
 
-.card:hover .back{
-    transform: perspective(500px) rotateY(360deg);
-} */
+ .nav {
+     display: flex !important;
+     list-style: none;
+     justify-content: space-between !important;
+ }
+
+ .nav-menu {
+     display: flex;
+     list-style: none;
+
+ }
+
+ .nav-menu-item {
+     font-size: 18px;
+     margin: 0 10px;
+     text-transform: uppercase;
+     width: max-content;
+ }
+
+ .nav-link {
+     display: flex;
+     color: white;
+     text-decoration: none;
+     list-style: none;
+     font-family: 'Georgia';
+     size: 30px;
+     list-style: none;
+     margin-right: 70px;
+     padding: 0 30px;
+ }
+
+ .nav-menu-link {
+     padding: 10px 15px;
+     border-radius: 3px;
+
+ }
+
+ .nav-menu-link:hover {
+     background-color: #2e265b;
+     transition: 0.5s;
+ }
+
+ .sub1,
+ .submenu1 {
+     color: white;
+     list-style-type: none;
+     text-decoration: none;
+     font-family: "Georgia";
+     position: center;
+     line-height: 25px;
+     background-color: #130F26;
+     padding: 5px 8px;
+     margin: 1% 10%;
+     width: max-content;
+ }
+
+ .submenu1:hover {
+     background-color: #2e265b;
+     transition: 0.5s;
+     padding: 5px 10px;
+     border-radius: 3px;
+
+ }

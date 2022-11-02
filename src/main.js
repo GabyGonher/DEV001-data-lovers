@@ -10,8 +10,8 @@ const contenedor = document.getElementById("card")
 
 cadaPokemon.forEach((pokemon) => {
 
-    const evoluciones = pokemon.evolution['next-evolution']
-    console.log(evoluciones)
+    // const evoluciones = pokemon.evolution['next-evolution']
+    // console.log(evoluciones)
 
     // if (evoluciones === ("next-evolution" ||  "prev-evolution")){
     //     console.log(evoluciones)
@@ -20,8 +20,8 @@ cadaPokemon.forEach((pokemon) => {
     // }
     // console.log(evoluciones)
 
-    const tarjeta = 
-    `<div class="card">
+    const tarjeta =
+        `<div class="card">
     <div class= "front">
     <p class="name">${pokemon.name}</p>
     <img src="${pokemon.img}">
@@ -33,16 +33,12 @@ cadaPokemon.forEach((pokemon) => {
     // <p>Generation: ${pokemon.generation['name']}</p><br>
     // <p>About: ${pokemon.about}</p>
     // </div>
-
     contenedor.insertAdjacentHTML('beforebegin', tarjeta)
 
 
+    const Tipos = document.getElementById("grass")
+    Tipos.addEventListener("click", function () {
+        document.getElementsByClassName('contenedor')[0].innerHTML = ""
+    });
+
 });
-
-
-// const pokemonName = data.pokemon
-// pokemonName.forEach((pokemon) =>
-// console.log(pokemon)
-// );
-// console.log(data)
-// //})
