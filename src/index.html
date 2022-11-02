@@ -1,24 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
 
-    <title>Pokémon</title>
-    <link rel="stylesheet" href="style.css"/>
-    <!-- <link rel="stylesheet" src="style.css" /> -->
-    <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
-  </head>
-  <body>
-    <!-- <img src="images/LOGO.png"> 
-    <img url="images/LOGO.png" -->
-    <section id="titulo"><div id="pk">Pokedex</div></section>  
-  
+<head>
+  <meta charset="utf-8">
 
-    <div class="contenedor"> <h3 id="card"> </h3> </div>
-    
-    
-    
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+  <title>Pokémon</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="stylesheet" src="style.css" /> -->
+  <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/fbde85969b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="encabezado">
+    <nav class="nav">
+      <!-- <a href="" class="nav-menu-link nav-link" >Pokedex</a> -para agregar logo pokebola -->
+      <ul class="nav-menu">
+        <li class="nav-menu-item">
+          <a href="#" class="nav-menu-link nav-link">Type</a>
+          <ul class="sub1">
+            <li> <a class="submenu1" value="fire" href="#">Fire </a></li>
+            <li> <a class="submenu1" id="grass" href="#">Grass </a></li>
+            <li> <a class="submenu1" value="water" href="#">Water</a></li>
+            <li> <a class="submenu1" value="electric" href="#">Electric </a></li>
+            <li> <a class="submenu1" value="flying" href="#">Flying </a></li>
+            <li> <a class="submenu1" value="normal" href="#">Normal </a></li>
+            <li> <a class="submenu1" value="poison" href="#">Poison</a></li>
+          </ul>
+        </li>
+        <li class="nav-menu-item">
+          <a href="#" class="nav-menu-link nav-link">Attack</a>
+        </li>
+        <li class="nav-menu-item">
+          <a href="#" class="nav-menu-link nav-link">Other</a>
+
+          <!-- <button class= "menuBurguer"> ----------menu hamburguesa
+                        <i class="fa fa-bars"> </i>
+                      </button> -->
+          <!-- </li> -->
+      </ul>
+      </li>
+
+    </nav>
+  </header>
+  <section id="titulo">
+    <div id="pk">Pokedex</div>
+  </section>
+
+
+  <div class="contenedor">
+    <div id="card"> </div>
+  </div>
+
+
+
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
