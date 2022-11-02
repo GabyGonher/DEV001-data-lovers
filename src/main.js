@@ -39,10 +39,6 @@ cadaPokemon.forEach((pokemon) => {
     const Tipos = document.getElementById("grass")
     Tipos.addEventListener("click", function () {
         document.getElementsByClassName('contenedor')[0].innerHTML = ""
+    });
 
-
-
-
-    })
-
-})
+});
