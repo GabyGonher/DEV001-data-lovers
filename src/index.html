@@ -14,26 +14,33 @@
 <body>
   <header class="encabezado">
     <nav class="nav">
-      <!-- <a href="" class="nav-menu-link nav-link" >Pokedex</a> -para agregar logo pokebola -->
       <ul class="nav-menu">
         <li class="nav-menu-item">
-          <a href="#" class="nav-menu-link nav-link">Type</a>
-          <ul class="sub1">
-            <li> <a class="submenu1" value="fire" href="#">Fire </a></li>
-            <li> <a class="submenu1" id="grass" href="#">Grass </a></li>
-            <li> <a class="submenu1" value="water" href="#">Water</a></li>
-            <li> <a class="submenu1" value="electric" href="#">Electric </a></li>
-            <li> <a class="submenu1" value="flying" href="#">Flying </a></li>
-            <li> <a class="submenu1" value="normal" href="#">Normal </a></li>
-            <li> <a class="submenu1" value="poison" href="#">Poison</a></li>
-          </ul>
+          <button class="nav-menu-link nav-link" class="sub1">Type</button>
+          <section id="burbuja" class="sub1">
+            <!-- <ul class="sub1"> -->
+              <li> <button class="submenu1" id="grass">Grass </button></li>
+              <li> <button class="submenu1" id="fire">Fire </button></li>
+              <li> <button class="submenu1" id="water">Water</button></li>
+              <li> <button class="submenu1" id="electric">Electric </button></li>
+              <li> <button class="submenu1" id="flaying">Flying </button></li>
+              <li> <button class="submenu1" id="normal">Normal </button></li>
+              <li> <button class="submenu1" id="poison">Poison</button></li>
+            <!-- </ul> -->
+          </section>
+          
         </li>
         <li class="nav-menu-item">
-          <a href="#" class="nav-menu-link nav-link">Attack</a>
+              
+            </li>
+            <div> <input type="text" class="buscador" placeholder="Buscar" required></input> </div>
         </li>
         <li class="nav-menu-item">
-          <a href="#" class="nav-menu-link nav-link">Other</a>
-
+          <!-- <button class="nav-menu-link nav-link" class="sub1">Other</button>
+        </li>
+        <li><buton class="nav-menu-link nav-link" class="sub1">Attack</buton></li> -->
+         
+          
           <!-- <button class= "menuBurguer"> ----------menu hamburguesa
                         <i class="fa fa-bars"> </i>
                       </button> -->
@@ -45,17 +52,17 @@
   </header>
   <section id="titulo">
     <div id="pk">Pokedex</div>
+   
   </section>
 
 
-  <div class="contenedor">
-    <div id="card"> </div>
-  </div>
-
-
-
-  <div id="root"></div>
-  <script src="main.js" type="module"></script>
-</body>
-
+    <div class="contenedor" id="cardList"> </div>
+    <div class="contenedor-tipos"> <h3 id="card-tipos"> </h3>
+    </div>
+    
+    
+    
+    <div id="root"></div>
+    <script src="main.js" type="module"></script>
+  </body>
 </html>

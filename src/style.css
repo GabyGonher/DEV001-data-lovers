@@ -1,5 +1,6 @@
  body {
      background: linear-gradient(90deg, #6652C3, #5AE6E0);
+     /* background-color: #130F26; */
  }
 
  #titulo {
@@ -24,7 +25,8 @@
 
  .card {
      position: relative;
-     background-color: #FECC51;
+     /* background-color: #FECC51; */
+     background-color:lightblue;
      border-color: #130F26;
      border-style: solid;
      border-radius: 6px;
@@ -92,15 +94,17 @@
  }
 
  .nav-link {
-     display: flex;
-     color: white;
+    color: white;
+    font-family: 'Georgia';
+    font-size: 17px;
+    text-transform: uppercase;
+     background-color: #130F26;
      text-decoration: none;
      list-style: none;
-     font-family: 'Georgia';
-     size: 30px;
      list-style: none;
      margin-right: 70px;
      padding: 0 30px;
+    display: flex;
  }
 
  .nav-menu-link {
@@ -113,25 +117,34 @@
      background-color: #2e265b;
      transition: 0.5s;
  }
+ 
 
- .sub1,
+ .sub1  {
+    background-color: none;
+    list-style-type: none;
+    text-decoration: none;
+    width: max-content;
+    display: none;
+    min-width: 140px;
+
+
+
+ }
+
  .submenu1 {
+     background-color:#130F26;
      color: white;
      list-style-type: none;
      text-decoration: none;
      font-family: "Georgia";
      position: center;
      line-height: 25px;
-     background-color: #130F26;
-     padding: 5px 8px;
-     margin: 1% 10%;
-     width: max-content;
      display: none;
      min-width: 140px;
  }
 
  .submenu1:hover {
-     background-color: #2e265b;
+     background-color:#433978;
      transition: 0.5s;
      padding: 5px 10px;
      border-radius: 3px;
@@ -142,3 +155,29 @@
     display:block
 
  }
+ .buscador{
+    position:relative;
+    padding: 5px;
+    
+
+    width: 240px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #130F26;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+        
+ /* }
+ .buscador input{
+    width: 240px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #130F26;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px; */
+
+ /* } */
