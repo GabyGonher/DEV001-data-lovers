@@ -1,8 +1,8 @@
 import { example, anotherExample } from '../src/data.js';
 
 
-describe('example', () => {
-  it('is a function', () => {
+describe('filtraTipo', () => {
+  it('deberia ser una funcion', () => {
     expect(typeof example).toBe('function');
   });
 

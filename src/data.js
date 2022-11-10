@@ -22,6 +22,7 @@ const cadaPokemon = data.pokemon
 
 
 export const filtraTipos = (type) => {    
+    console.log(type)
     return cadaPokemon.filter((element) => {
         return element.type.includes(type);
     });

@@ -32,16 +32,17 @@ tarjeta.className= "card"
 
 (tarjetasPokemon(cadaPokemon))
 
-// const pruebaTipos = document.getElementById("prueba")
-// pruebaTipos.addEventListener("change", (event) => filtraTipos(cadaPokemon, event.target.value))
+
 
 const pruebita= document.querySelectorAll ('.sub1 button')
 function eventos (e){
-    tarjetasPokemon(filtraTipos ("submenu1")
+    tarjetasPokemon(filtraTipos (e.target.value)
 )}
 pruebita.forEach((button) =>{
     button.addEventListener("click", eventos)
 })
+
+// cadaPokemon
 
 
 // const Tipos= document.getElementById("fire")
