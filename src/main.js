@@ -35,9 +35,17 @@ tarjeta.className= "card"
 // const pruebaTipos = document.getElementById("prueba")
 // pruebaTipos.addEventListener("change", (event) => filtraTipos(cadaPokemon, event.target.value))
 
+const pruebita= document.querySelectorAll ('.sub1 button')
+function eventos (e){
+    tarjetasPokemon(filtraTipos ("submenu1")
+)}
+pruebita.forEach((button) =>{
+    button.addEventListener("click", eventos)
+})
 
-const Tipos= document.getElementById("fire")
-Tipos.addEventListener("click", function () { 
- tarjetasPokemon(filtraTipos("fire"));
+
+// const Tipos= document.getElementById("fire")
+// Tipos.addEventListener("click", function () { 
+//  tarjetasPokemon(filtraTipos("fire"));
         
-});
+// });
