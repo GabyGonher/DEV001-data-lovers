@@ -1,44 +1,52 @@
 
 import data from './data/pokemon/pokemon.js';
 import { filtraTipos } from './data.js';
+import pokemon from './data/pokemon/pokemon.js';
 
 const cadaPokemon = data.pokemon
-const contenedor = document.getElementById("card")
+const contenedor = document.getElementById("cardList")
+const contenedorTipos= document.getElementById("card-Tipos")
 
 
+const tarjetasPokemon= (arrPoke) => {
+    contenedor.innerHTML='';
+    console.log (arrPoke)
+    arrPoke.forEach((pokemon) => { 
+       
 
-
-cadaPokemon.forEach((pokemon) => {
-
-    // const evoluciones = pokemon.evolution['next-evolution']
-    // console.log(evoluciones)
-
-    // if (evoluciones === ("next-evolution" ||  "prev-evolution")){
-    //     console.log(evoluciones)
-    // } else {
-    //     console.log ("no tiene evolución")
-    // }
-    // console.log(evoluciones)
-
-    const tarjeta =
-        `<div class="card">
-    <div class= "front">
-    <p class="name">${pokemon.name}</p>
-    <img src="${pokemon.img}">
-    <p class="pk_num">${pokemon.num}</p>
-    <p>Type: ${pokemon.type[0]}</p>
-    <p>Rarity: ${pokemon["pokemon-rarity"]}</p>
+const tarjeta= document.createElement("div");
+tarjeta.className= "card"
+    tarjeta.innerHTML=
+    `<div class= "front">
+        <p class="name">${pokemon.name}</p>
+        <img src="${pokemon.img}">
+        <p class="pk_num">${pokemon.num}</p>
+        <p>Type: ${pokemon.type[0]}</p>
+        <p>Rarity: ${pokemon["pokemon-rarity"]}</p>
     </div>`
-    // <div class="back">
-    // <p>Generation: ${pokemon.generation['name']}</p><br>
-    // <p>About: ${pokemon.about}</p>
-    // </div>
-    contenedor.insertAdjacentHTML('beforebegin', tarjeta)
+
+    contenedor.appendChild(tarjeta)
 
 
-    const Tipos = document.getElementById("grass")
-    Tipos.addEventListener("click", function () {
-        document.getElementsByClassName('contenedor')[0].innerHTML = ""
-    });
+})};
 
-});
+(tarjetasPokemon(cadaPokemon))
+
+
+
+const pruebita= document.querySelectorAll ('.sub1 button')
+function eventos (e){
+    tarjetasPokemon(filtraTipos (e.target.value)
+)}
+pruebita.forEach((button) =>{
+    button.addEventListener("click", eventos)
+})
+
+// cadaPokemon
+
+
+// const Tipos= document.getElementById("fire")
+// Tipos.addEventListener("click", function () { 
+//  tarjetasPokemon(filtraTipos("fire"));
+        
+// });
