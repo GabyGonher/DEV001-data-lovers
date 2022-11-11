@@ -24,7 +24,7 @@
  }
 
  .card {
-     position: relative;
+     /* position: relative; */
      /* background-color: #FECC51; */
      background-color:lightblue;
      border-color: #130F26;
@@ -129,6 +129,7 @@
 
 
 
+
  }
 
  .submenu1 {
@@ -142,6 +143,7 @@
      display: none;
      min-width: 140px;
  }
+
 
  .submenu1:hover {
      background-color:#433978;
