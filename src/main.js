@@ -1,18 +1,76 @@
+
 import data from './data/pokemon/pokemon.js';
-//console.log(data);
-//import { example } from './data.js';
-//document.getElementsByName(bulbasaur)
-const pokemonName = data.pokemon
-const contenedor = document.getElementById("card")
+import { filtraTipos } from './data.js';
+import pokemon from './data/pokemon/pokemon.js';
 
-pokemonName.forEach((pokemon) => {
-    const tarjeta = `<div class="card"><p>${pokemon.name}</p><br><img src="${pokemon.img}"><br><p>Type: ${pokemon.type}</p><br><p>Evolution: ${pokemon.evolution['next-evolution:name']}`
-    contenedor.insertAdjacentHTML('beforebegin', tarjeta)
-});
+const cadaPokemon = data.pokemon
+const contenedor = document.getElementById("cardList")
+const divParaModal = document.getElementById("divParaModal")
 
-// const pokemonName = data.pokemon
-// pokemonName.forEach((pokemon) =>
-// console.log(pokemon)
-// );
-// console.log(data)
-// //})
+
+const tarjetasPokemon= (arrPoke) => {
+    contenedor.innerHTML='';
+    console.log (arrPoke)
+    arrPoke.forEach((pokemon) => { 
+
+
+const tarjeta= document.createElement("div");
+tarjeta.className= "card"
+    tarjeta.innerHTML=
+    `<div class= "front">
+        <p class="name">${pokemon.name}</p>
+        <img src="${pokemon.img}">
+        <p class="pk_num">${pokemon.num}</p>
+        <p>Type: ${pokemon.type[0]}</p>
+        <p>Rarity: ${pokemon["pokemon-rarity"]}</p>
+        <button id="openModal" class="open">Learn more</button>
+    </div>`
+    contenedor.appendChild(tarjeta)
+
+    const modal = document.createElement("div");
+    modal.className = "modal-container"
+    modal.id = "modal-container"
+        modal.innerHTML=
+        `<div class= "modal">
+            <p class="name">${pokemon.name}</p>
+            <img src="${pokemon.img}">
+            <p>${pokemon.about}</p>
+            <button id="closeModal" class="close">X</button>
+        </div>`
+        divParaModal.appendChild(modal)
+
+const open = document.getElementById("openModal")
+const modal_container = document.getElementById("modal-container")
+const close = document.getElementById("closeModal")
+
+
+open.addEventListener("click", () => {
+    modal_container.classList.add("show")
+})
+
+close.addEventListener("click", () => {
+    modal_container.classList.remove("show")
+})
+
+})};
+
+(tarjetasPokemon(cadaPokemon))
+
+
+
+const pruebita= document.querySelectorAll ('.sub1 button')
+function eventos (e){
+    tarjetasPokemon(filtraTipos (e.target.value)
+)}
+pruebita.forEach((button) =>{
+    button.addEventListener("click", eventos)
+})
+
+// cadaPokemon
+
+
+// const Tipos= document.getElementById("fire")
+// Tipos.addEventListener("click", function () { 
+//  tarjetasPokemon(filtraTipos("fire"));
+        
+// });

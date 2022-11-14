@@ -1,24 +1,79 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
 
-    <title>Pokémon</title>
-    <link rel="stylesheet" href="style.css"/>
-    <!-- <link rel="stylesheet" src="style.css" /> -->
-    <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
-  </head>
-  <body>
-    <!-- <img src="images/LOGO.png"> 
-    <img url="images/LOGO.png" -->
-    <section id="titulo"><div id="pk">Pokedex</div></section>  
-  
+<head>
+  <meta charset="utf-8">
 
-    <div class="contenedor"> <h3 id="card"> </h3> </div>
-    
-    
-    
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+  <title>Pokémon</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="stylesheet" src="style.css" /> -->
+  <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/fbde85969b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="encabezado">
+    <nav class="nav">
+      <ul class="nav-menu">
+        <li class="nav-menu-item">
+          <button class="nav-menu-link nav-link" class="sub1">Type</button>
+          <div class="sub1">
+            <button value="grass" class="submenu1" id="grass">Grass </button>
+            <button value="fire" class="submenu1" id="fire">Fire </button>
+            <button value="water" class="submenu1" id="water">Water</button>
+            <button value="electric" class="submenu1" id="electric">Electric </button>
+            <button value="flying" class="submenu1" id="flying">Flying </button>
+            <button value="normal" class="submenu1" id="normal">Normal </button>
+            <button value="poison" class="submenu1" id="poison">Poison</button>
+            <button value="ice" class="submenu1" id="ice"> Ice </button>
+            <button value="fighting" class="submenu1" id="fighting">Fighting </button>
+            <button value="ground" class="submenu1" id="ground">Ground</button>
+            <button value="psychic" class="submenu1" id="psychic">Psychic </button>
+            <button value="bug" class="submenu1" id="bug">Bug </button>
+            <button value="rock" class="submenu1" id="rock">Rock </button>
+            <button value="ghost" class="submenu1" id="ghost">Gosth</button>
+            <button value="dark" class="submenu1" id="dark">Dark </button>
+            <button value="dragon" class="submenu1" id="dragon">Dragon </button>
+            <button value="steel" class="submenu1" id="steel">Steel </button>
+            <button value="fairy" class="submenu1" id="fairy">Fairy</button>
+        </li>
+        </div>
+
+        </li>
+        <li class="nav-menu-item">
+
+        </li>
+        <div> <input type="text" class="buscador" placeholder="Buscar" required></input> </div>
+        </li> -->
+        <!-- <li class="nav-menu-item"> -->
+        <!-- <button class="nav-menu-link nav-link" class="sub1">Other</button>
+        </li>
+        <li><buton class="nav-menu-link nav-link" class="sub1">Attack</buton></li> -->
+
+
+        <!-- <button class= "menuBurguer"> ----------menu hamburguesa
+                        <i class="fa fa-bars"> </i>
+                      </button> -->
+        <!-- </li> -->
+      </ul>
+      </li>
+
+    </nav>
+  </header>
+  <section id="titulo">
+    <div id="pk">Pokedex</div>
+
+  </section>
+
+
+  <div class="contenedor" id="cardList"> </div>
+  <div id="divParaModal"> </div>
+
+
+
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
