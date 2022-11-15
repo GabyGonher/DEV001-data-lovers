@@ -7,7 +7,8 @@
 
   <title>Pokémon</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- <link rel="stylesheet" src="style.css" /> -->
+  <link rel="stylesheet" href="imagenes/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
   <script src="https://kit.fontawesome.com/fbde85969b.js" crossorigin="anonymous"></script>
 </head>
@@ -17,8 +18,8 @@
     <nav class="nav">
       <ul class="nav-menu">
         <li class="nav-menu-item">
-          <button class="nav-menu-link nav-link" class="sub1">Type</button>
-          <div class="sub1">
+          <button class="nav-menu-link nav-link sub1">Type</button>
+          <div class="desplegable">
             <button value="grass" class="submenu1" id="grass">Grass </button>
             <button value="fire" class="submenu1" id="fire">Fire </button>
             <button value="water" class="submenu1" id="water">Water</button>
@@ -37,42 +38,25 @@
             <button value="dragon" class="submenu1" id="dragon">Dragon </button>
             <button value="steel" class="submenu1" id="steel">Steel </button>
             <button value="fairy" class="submenu1" id="fairy">Fairy</button>
-        </li>
+          </div>
+          </li>
+
+        <div class="buscador">
+        <input type="text" class="inputBuscar" placeholder="Buscar" required> 
+        <a ref="#" class="botonBuscador">
+        <i class="icon-search"> </i>
+        </a>
         </div>
-
-        </li>
-        <li class="nav-menu-item">
-
-        </li>
-        <div> <input type="text" class="buscador" placeholder="Buscar" required></input> </div>
-        </li> -->
-        <!-- <li class="nav-menu-item"> -->
-        <!-- <button class="nav-menu-link nav-link" class="sub1">Other</button>
-        </li>
-        <li><buton class="nav-menu-link nav-link" class="sub1">Attack</buton></li> -->
-
-
-        <!-- <button class= "menuBurguer"> ----------menu hamburguesa
-                        <i class="fa fa-bars"> </i>
-                      </button> -->
-        <!-- </li> -->
       </ul>
-      </li>
-
     </nav>
   </header>
   <section id="titulo">
     <div id="pk">Pokedex</div>
-
   </section>
 
 
   <div class="contenedor" id="cardList"> </div>
   <div id="divParaModal"> </div>
-
-
-
-  <div id="root"></div>
   <script src="main.js" type="module"></script>
 </body>
 

@@ -1,6 +1,9 @@
 body {
     background: linear-gradient(90deg, #6652C3, #5AE6E0);
-     /* background-color: #130F26; */
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    
 }
 
 #titulo {
@@ -14,9 +17,9 @@ body {
 #pk {
     align-content: center;
     text-align: center;
-    margin-top: 100px;
+    /* margin-top: 100px;
     margin-bottom: 100px;
-    height: 200px;
+    height: 200px; */
 
 }
 
@@ -68,7 +71,7 @@ body {
 }
 
 .encabezado {
-    background-color: #130F26;
+    background-color:#130F26;
     height: 60px;
     position: fixed;
     width: 100%;
@@ -111,6 +114,7 @@ body {
 .nav-menu-link {
     padding: 10px 15px;
     border-radius: 3px;
+    
 }
 
 .nav-menu-link:hover {
@@ -118,9 +122,9 @@ body {
     transition: 0.5s;
 }
 
-
 .sub1 {
     background-color: none;
+    color: #f1f1f1;
     list-style-type: none;
     text-decoration: none;
     width: max-content;
@@ -149,12 +153,64 @@ body {
     display: block;
 }
 
-.nav li:hover>.sub1,
+.nav button:hover> .desplegable,
 .submenu1 {
     display: block
 }
 
-.buscador {
+.buscador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    background: #f5f5f5;
+    padding: 6px;
+    height: 40px;
+    border-radius: 40px;
+}
+.inputBuscar{
+    background: none;
+    border:none;
+    outline: none;
+    color: #f1f1f1;
+    float: right;
+    line-height: 60px;
+    transition: 0.3s;
+    width:0;   
+
+}
+.botonBuscador{
+
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color:gray;
+    font-size: 30px;
+}
+ /* Para que sea responsivo */
+ @media screen and (min-width:480px) {
+     .buscador:hover> .inputBuscar{
+        width: 190px;
+
+     } 
+
+@media screen and (min-width:768px) {
+    .buscador:hover>.inputBuscar {
+        width: 300px;
+
+    }
+
+ @media screen and (min-width:1024px) {
+    .buscador:hover>.inputBuscar {
+        width:500px;
+    
+            }
+
+
+/* .buscador {
     position: relative;
     padding: 5px;
 
@@ -166,19 +222,9 @@ body {
     color: #130F26;
     outline: none;
     border: 1px solid silver;
-    border-radius: 30px;
+    border-radius: 30px; */
 }
 
-/*.buscador input{
-    width: 240px;
-    height: 40px;
-    padding: 0 20px;
-    font-size: 18px;
-    color: #130F26;
-    outline: none;
-    border: 1px solid silver;
-    border-radius: 30px; 
-} */
 
 /* Para el modal  */
 .modal-container {
