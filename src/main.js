@@ -36,7 +36,7 @@ const tarjetasPokemon = (arrPoke) => {
             <p class="img"><img src="${pokemon.img}"></p>
             <p class="text-modal">${pokemon.about}</p>
             <div class="text-modal">Attack ${pokemon["special-attack"].map((ataque) =>
-                `<li class="ataqueClass ${ataque}"> ${ataque.name}</li>`).join(", ")}</div> 
+                `<li class="ataqueClass ${ataque}"> ${ataque.name}</li>`)}</div> 
             <p class="text-modal">Height ${pokemon["size"].height}</p>
             <p class="text-modal">Weight ${pokemon["size"].height}</p>
             <button id="closeModal" class="close">X</button>
