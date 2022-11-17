@@ -1,3 +1,10 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: linear-gradient(90deg, #6652C3, #5AE6E0);
     box-sizing: border-box;
@@ -42,6 +49,7 @@ body {
     max-height: 1000%;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: capitalize;
 }
 
 .name {
@@ -49,6 +57,20 @@ body {
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 3px;
+    text-align: center;
+    align-content: center;
+    font-family: 'Roboto', sans-serif;
+    color: #130F26;
+}
+
+.name-card{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    align-content: center;
+    font-family: 'Roboto', sans-serif;
+    color: #130F26;
 }
 
 .pk_num {
@@ -73,16 +95,18 @@ body {
 /* Menú desplegable */
 .encabezado {
     display: flex;
+    justify-content: space-between;
     margin: 0px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 150%;
     background-color: #130F26;
 }
-.nav{
-    display:flex;
+
+.nav {
+    display: flex;
 }
 
-.submenu1{
+.submenu1 {
     border-style: none;
     background-color: none;
 
@@ -123,15 +147,15 @@ ol {
 
 .nav li:hover>ul {
     display: block;
-    /* Buscador------- */
+    
 }
-
+/* Buscador------- */
 .buscador {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     position: absolute;
-    left: 50%;
+    left: 60%;
     top: 35px;
     transform: translate(-50%, -50%);
     background: #f5f5f5;
@@ -153,12 +177,16 @@ ol {
 }
 
 .botonBuscador {
-
     width: 40px;
     height: 40px;
     text-decoration: none;
     color: gray;
     font-size: 30px;
+}
+
+button,
+.icon-search {
+    cursor: pointer;
 }
 
 /* Para que sea responsivo el buscador */
@@ -211,10 +239,11 @@ ol {
             padding: 30px 50px;
             width: 600px;
             max-width: 100%;
+            margin: 0;
         }
 
         .close {
-            position:relative;
+            position: relative;
             top: -290px;
             left: 100%;
             display: flex;
@@ -225,4 +254,34 @@ ol {
 
         .open {
             cursor: pointer;
+            border: none;
+            background-color: #6652C3;
+            border-radius: 6px;
+            padding: 10px;
+            color: #f5f5f5;
         }
+
+        .img{
+            text-align: center;
+        }
+
+        .text-modal {
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .name-modal {
+            font-family: 'Pokemon Solid', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 5vw;
+            color: #6652C3;
+            text-align: center;
+            text-transform: capitalize;
+            -webkit-text-stroke: 2px #000;
+            padding: 0;
+            margin: 0;
+        }
+
+        .size{
+            display: flex;
+        }
+
