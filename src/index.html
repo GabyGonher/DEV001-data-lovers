@@ -41,10 +41,11 @@
         </li>
         <li class="buttonOrdenarAZ" id="buttonOrdenarAZ" value="sortAZ"><button>Sort A-Z</button> </li>
         <li class="buttonOrdenarZA" id="buttonOrdenarZA" value="sortZA"><button>Sort Z-A</button> </li>
+        <li id="btnEstadistica"><button>Statistics</button> </li>
         <div class="buscador">
-          <input type="text" class="inputBuscar" placeholder="Buscar" required>
+          <input type="text" id="inputBuscar" class="inputBuscar" placeholder="Buscar" required>
           <a ref="#" class="botonBuscador">
-            <i class="icon-search"> </i>
+            <i class="icon-search"> </i> 
           </a>
         </div>
       </ul>
@@ -56,8 +57,14 @@
   </section>
 
 
-  <div class="contenedor" id="cardList"> </div>
-  <div id="divParaModal"> </div>
+  <div class="contenedor" id="cardList" filter="none"> </div>
+  <div id="divParaModal" class="divParaModal"> </div>
+
+
+  <div  class= "divOpaco aparece" id="divOpaco" >
+    <div class="divBlanco" id="divBlanco"> <button id="closeEstadistica">X</button></div>
+  </div>
+
   <script src="main.js" type="module"></script>
 </body>
 
