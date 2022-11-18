@@ -44,8 +44,6 @@ const tarjetasPokemon = (arrPoke) => {
         contenedor.appendChild(tarjeta)
 
 
-
-
         const open = document.querySelectorAll(".open")
 
 
