@@ -1,33 +1,21 @@
-import data from './data/pokemon/pokemon.js';
 
-const cadaPokemon = data.pokemon
+export const filtraTipos = (type,arrPokemon) => {  
+    const filterType= arrPokemon.filter((element) => 
+        element.type.includes(type)
+       
+         
+    )
+    console.log(filterType)
+     return filterType;
+   
+   };
 
 
 
-
-// export const filtraTipos = (type,cadaPokemon) => {  
-//     const filterType= cadaPokemon.filter((element) => 
-//         element.type.includes(type)
-
-//     );
-//     console.log(filterType);
-//     return filterType;
-// };
-
-export const filtraTipos = (type) => {
-    // console.log(type)
-    return cadaPokemon.filter((element) => {
-        return element.type.includes(type);
-    });
-}
-
-// export const ordenarNum = cadaPokemon.sort((a, b) => {
-//     return a.num - b.num
-// });console.log(ordenarNum)
-
-export const ordenarAZ = () => {
+   
+export const ordenarAZ = (arrPokemon) => {
     
-    return cadaPokemon.sort((a, b) => {
+    return arrPokemon.sort((a, b) => {
     a.num - b.num
     if (a.name < b.name) {
         return -1;
@@ -35,9 +23,9 @@ export const ordenarAZ = () => {
 });
 };
 
-export const ordenarZA = () => {
+export const ordenarZA = (arrPokemon) => {
     
-    return cadaPokemon.sort((a, b) => {
+    return arrPokemon.sort((a, b) => {
     a.num - b.num
     if (b.name < a.name) {
         return -1;
@@ -45,19 +33,37 @@ export const ordenarZA = () => {
 });
 };
 
-export const filtraBuscador = (name) => {
-    console.log(name)
-    const buscador= cadaPokemon.filter((name) => {
-        name.target.matches("")
-    });
-    // console.log(buscador)
-    return buscador
+export const contarTipos = (arrPokemon) =>{
+    const pruebita= arrPokemon.map((type) => arrPokemon.type);
+    
+
+console.log(pruebita)
 }
-
-
-// const filtraBuscador = (name) => {
-//     console.log(name)
-//     return cadaPokemon.filter((element) => {
-//         return element.name.includes(pikachu);
+// export const filtraBuscador = (name) => {
+//     // console.log(name)
+//     const buscador= arrPokemon.filter((name) => {
+//         name.target.matches("")
 //     });
+//     // console.log(buscador)
+//     return buscador
 // }
+
+// export const filtraBuscador = (name, arrPokemon) => {
+//     // debugger;
+//     const buscador = arrPokemon.filter((pokemon) => {
+//         buscador.includes(name)
+
+   
+// })};
+
+
+
+
+
+
+
+
+
+
+
+
