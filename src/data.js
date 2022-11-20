@@ -1,3 +1,4 @@
+import pokemon from "./data/pokemon/pokemon.js";
 
 export const filtraTipos = (type,arrPokemon) => {  
     const filterType= arrPokemon.filter((element) => 
@@ -39,6 +40,8 @@ export const contarTipos = (arrPokemon) =>{
 
 console.log(pruebita)
 }
+
+
 // export const filtraBuscador = (name) => {
 //     // console.log(name)
 //     const buscador= arrPokemon.filter((name) => {
@@ -48,22 +51,14 @@ console.log(pruebita)
 //     return buscador
 // }
 
-// export const filtraBuscador = (name, arrPokemon) => {
-//     // debugger;
-//     const buscador = arrPokemon.filter((pokemon) => {
-//         buscador.includes(name)
-
-   
-// })};
 
 
 
 
+ export const filtraBuscador = (name, arrPokemon) => {
+    // debugger;
+    const buscador = arrPokemon.filter(pokemon => pokemon.name.includes(name) );
 
-
-
-
-
-
-
-
+        // console.log(name)
+        return buscador
+ }

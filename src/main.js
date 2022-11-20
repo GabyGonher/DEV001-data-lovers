@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { filtraTipos, ordenarAZ, ordenarZA, } from './data.js';
+import { filtraTipos, ordenarAZ, ordenarZA, filtraBuscador } from './data.js';
 
 
 
@@ -152,34 +152,7 @@ closeEstadistica.addEventListener("click", () => {
 //     }, {})
 //     return reducePerType
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+///////////////////////////////////////////////////////////////////
 // const inputBuscar= document.getElementById("inputBuscar")
 // inputBuscar.addEventListener("keyup", () => {
 //     const valor = inputBuscar.value
@@ -187,20 +160,16 @@ closeEstadistica.addEventListener("click", () => {
 //         }
 //     );
 
-// const inputBuscar = document.getElementById("inputBuscar")
-// inputBuscar.addEventListener("keyup", () => {
-//     console.log()
-//     const valor = inputBuscar.value
-//     filtraBuscador(valor, cadaPokemon)
-// }
-// );
+const inputBuscar= document.getElementById("inputBuscar")
+inputBuscar.addEventListener("keyup", () => {
+    const search = filtraBuscador(inputBuscar.value, cadaPokemon);
+    // console.log(search);
+    tarjetasPokemon (search)
+    // tarjetasPokemon(ordenarZA(resultado))
 
 
-// //*aqui va el find*/
+    // console.log(search)
 
-// export const findById = (id, pokemonData) => {
-//     const findbyidPokemon = pokemonData.find(
-//         (pokemon) => pokemon.num == id);
-//     //console.log(findbyidPokemon);
-//     return findbyidPokemon;
-// };
+    // if{(search > 0 tarjetasPokemon)
+
+})
