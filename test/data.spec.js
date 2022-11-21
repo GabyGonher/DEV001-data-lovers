@@ -1,4 +1,4 @@
-import { filtraTipos, ordenarAZ, ordenarZA } from '../src/data.js';
+import { filtraTipos, ordenarAZ, ordenarZA, filtraBuscador, reduceType } from '../src/data.js';
 
 let arrayParaTest = [
   {
@@ -206,6 +206,27 @@ let arrayOrdenarZA = [
   },
 
 ];
+// PRUEBA PARA FILTRADO TIPOS ....
+let arrayBuscador =[
+    {
+      "num": "175",
+      "name": "togepi",
+      "generation": {
+        "num": "generation ii",
+        "name": "johto"
+      },
+      "pokemon-rarity": "normal",
+      "type": [
+        "fairy"
+      ],
+    },
+];
+
+const objReduce = {
+  "water": 2, 
+  "fairy": 2
+
+}
 
 
 describe('filtraTipos', () => {
@@ -242,4 +263,26 @@ describe('ordenarZA', () => {
   it('returns un array que contiene los pokemon ordenados de la Z-A', () => {
     expect(ordenarZA(arrayParaTest)).toEqual(arrayOrdenarZA);
   });
+});
+
+//TEST PARA BUSCADOR .......
+describe('filtraBuscador', () => {
+  it('debería ser una función', () => {
+    expect(typeof filtraBuscador).toBe('function');
+  });
+  it('Debería retornar "togepi" para "togepi"', () => {
+  expect(filtraBuscador('togepi', arrayBuscador)).toEqual(arrayBuscador);
+  });
+})
+
+// TEST PARA REDUCE 
+describe("reduceType", () => {
+  it("es una function", () => {
+    expect(typeof reduceType).toBe("function");
+  });
+
+  it("deberia retornar un objeto con propiedades y valor", () => {
+    expect(reduceType(arrayParaTest)).toEqual(objReduce);
+  });
+
 });
