@@ -3,7 +3,7 @@ export const filtraTipos = (type, arrPokemon) => {
         element.type.includes(type)
     )
 
-    console.log(filterType)
+    // console.log(filterType)
     return filterType;   
 };
 
@@ -31,7 +31,7 @@ export const filtraBuscador = (name, arrPokemon) => {
     return buscador
 }
 
-export const arrTipos = (arrPokemon) => {
+export const reduceType = (arrPokemon) => {
 const tiposFlat = arrPokemon.map((pokemon) => pokemon.type).flat()
 const contarTipos = tiposFlat.reduce(function(obj, tipos){
     if (!obj[tipos]){
@@ -42,16 +42,7 @@ const contarTipos = tiposFlat.reduce(function(obj, tipos){
     
     return obj;
 }, {});
-console.log(contarTipos)
+// console.log(contarTipos)
 return contarTipos
 }
-
-
-
-
-
-
-
-
-
 
