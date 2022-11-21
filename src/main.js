@@ -1,6 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { filtraTipos, ordenarAZ, ordenarZA, } from './data.js';
-
+import { filtraTipos, ordenarAZ, ordenarZA, filtraBuscador, arrTipos } from './data.js';
 
 
 const cadaPokemon = data.pokemon
@@ -16,14 +15,13 @@ const crearModal = (pokemon) => {
             <p class="img"><img src="${pokemon.img}"></p>
             <p class="text-modal">${pokemon.about}</p>
             <div class="text-modal">Attack ${pokemon["special-attack"].map((ataque) =>
-            `<li class="ataqueClass ${ataque}"> ${ataque.name}</li>`).join(", ")}</div> 
+            `<li class="ataqueClass ${ataque}">${ataque.name}</li>`)}</div> 
             <p class="text-modal">Height ${pokemon["size"].height}</p>
             <p class="text-modal">Weight ${pokemon["size"].height}</p>
             <button id="closeModal" class="close">X</button>
         </div>`
     divParaModal.innerHTML = '';
     divParaModal.appendChild(modal)
-
 }
 
 const tarjetasPokemon = (arrPoke) => {
@@ -33,11 +31,12 @@ const tarjetasPokemon = (arrPoke) => {
         const tarjeta = document.createElement("div");
         tarjeta.className = "card"
         tarjeta.innerHTML =
-            `<div class= "front">
+        `<div class= "front">
             <p class="name">${pokemon.name}</p>
             <p class="img" ><img src="${pokemon.img}"></p>
             <p class="pk_num">${pokemon.num}</p>
-            <div><span class="name-card">Type</span><br> ${pokemon.type.map((type) => `<span class="typeClass ${type}">${type}</span>`).join(" / ")}</div>
+            <div><span class="name-card">Type</span><br> ${pokemon.type.map((type) =>
+                `<span class="typeClass ${type}">${type}</span>`).join(" / ")}</div>
             <p><span class="name-card">Generation</span><br> ${pokemon["generation"].name}</p>
             <button id="${index}" class="open" name="openModal">Learn more</button>
         </div>`
@@ -62,28 +61,19 @@ const tarjetasPokemon = (arrPoke) => {
                 })
             })
         })
-
-
     })
-
 };
-
 (tarjetasPokemon(cadaPokemon))
 
 
 
 const listaTipos = document.querySelectorAll('.menuDesplegable button')
-
 listaTipos.forEach((button) => {
-
     button.addEventListener("click", function eventos(e) {
         contenedor.setAttribute("filter", e.target.value)
         const resultado = filtraTipos(e.target.value, cadaPokemon)
         tarjetasPokemon(resultado)
-        
-
     });
-
 });
 
 const buttonOrdenarAZ = document.getElementById('buttonOrdenarAZ')
@@ -95,9 +85,7 @@ buttonOrdenarAZ.addEventListener("click", function () {
         const filtroElegido = contenedor.getAttribute("filter")
         const resultado = filtraTipos(filtroElegido, cadaPokemon)
         tarjetasPokemon(ordenarAZ(resultado))
-
     }
-
 });
 
 const buttonOrdenarZA = document.getElementById('buttonOrdenarZA')
@@ -109,9 +97,7 @@ buttonOrdenarZA.addEventListener("click", function () {
         const filtroElegido = contenedor.getAttribute("filter")
         const resultado = filtraTipos(filtroElegido, cadaPokemon)
         tarjetasPokemon(ordenarZA(resultado))
-
     }
-
 });
 
 
@@ -123,44 +109,35 @@ btnEstadistica.addEventListener("click", () => {
 })
 closeEstadistica.addEventListener("click", () => {
     divOpaco.classList.remove("show");
-
 })
 
-// Cantidad total de Pokemon
-//Del array general sacar uno por cada tipo 
-//Contar la longitud de cada uno  
+const inputBuscar = document.getElementById("inputBuscar")
+inputBuscar.addEventListener("keyup", () => {
+    const search = filtraBuscador(inputBuscar.value, cadaPokemon);
+    console.log(search);
+    tarjetasPokemon(search)
+})
 
-
-
-
-
-
-
-// //AQUI VA EL METODO REDUCE
-
-// export const reductionXType = (objectData) => {
-//     const reducePerType = objectData.reduce((obj, element) => {
-//         if (obj[element] != undefined) {
-//             obj[element] += 1;
-//         } else {
-//             obj[element] = 1;
-//         }
-
-//         return obj
-//     }, {})
-//     return reducePerType
-// }
-
-
-
-
-
-
-
-
-
-
-
+document.getElementById("conteoTipos").innerHTML = 
+`<p>Grass ${arrTipos(cadaPokemon).grass}</p>
+<p>Fire ${arrTipos(cadaPokemon).fire}</p>
+<p>Water ${arrTipos(cadaPokemon).water}</p>
+<p>Electric ${arrTipos(cadaPokemon).electric}</p>
+<p>Flying ${arrTipos(cadaPokemon).flying}</p>
+<p>Normal ${arrTipos(cadaPokemon).normal}</p>
+<p>Poison ${arrTipos(cadaPokemon).poison}</p>
+<p>Ice ${arrTipos(cadaPokemon).ice}</p>
+<p>Fighting ${arrTipos(cadaPokemon).fighting}</p>
+<p>Ground ${arrTipos(cadaPokemon).ground}</p>
+<p>Psychic ${arrTipos(cadaPokemon).psychic}</p>
+<p>Bug ${arrTipos(cadaPokemon).bug}</p>
+<p>Rock ${arrTipos(cadaPokemon).rock}</p>
+<p>Ghost ${arrTipos(cadaPokemon).ghost}</p>
+<p>Dark ${arrTipos(cadaPokemon).dark}</p>
+<p>Dragon ${arrTipos(cadaPokemon).dragon}</p>
+<p>Steel ${arrTipos(cadaPokemon).steel}</p>
+<p>Fairy ${arrTipos(cadaPokemon).fairy}</p>
+`
 
 
 
@@ -178,27 +155,13 @@ closeEstadistica.addEventListener("click", () => {
 
 
 
-// const inputBuscar= document.getElementById("inputBuscar")
-// inputBuscar.addEventListener("keyup", () => {
-//     const valor = inputBuscar.value
-//     filtraBuscador (valor)
-//         }
-//     );
-
-// const inputBuscar = document.getElementById("inputBuscar")
-// inputBuscar.addEventListener("keyup", () => {
-//     console.log()
-//     const valor = inputBuscar.value
-//     filtraBuscador(valor, cadaPokemon)
-// }
-// );
 
 
-// //*aqui va el find*/
 
-// export const findById = (id, pokemonData) => {
-//     const findbyidPokemon = pokemonData.find(
-//         (pokemon) => pokemon.num == id);
-//     //console.log(findbyidPokemon);
-//     return findbyidPokemon;
-// };
+
+
+
+
+
+
+

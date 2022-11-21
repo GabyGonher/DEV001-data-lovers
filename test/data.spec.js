@@ -243,3 +243,28 @@ describe('ordenarZA', () => {
     expect(ordenarZA(arrayParaTest)).toEqual(arrayOrdenarZA);
   });
 });
+
+// PRUEBA PARA BUSCADOR
+// let arrayBuscador =[
+//     {
+//       "num": "175",
+//       "name": "togepi",
+//       "generation": {
+//         "num": "generation ii",
+//         "name": "johto"
+//       },
+//       "pokemon-rarity": "normal",
+//       "type": [
+//         "fairy"
+//       ],
+//     },
+// ]
+
+describe('filtraBuscador', () => {
+  it('debería ser una función', () => {
+    expect(typeof filtraBuscador).toBe('function');
+  });
+  // it('Debería retornar "togepi" para "togepi"', () => {
+  //   expect(filtraBuscador('togepi')).toBe(arrayBuscador);
+  // });
+})

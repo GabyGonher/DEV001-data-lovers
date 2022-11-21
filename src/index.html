@@ -19,24 +19,24 @@
       <ul class="nav">
         <li class="bandeja"><button>Type</button>
           <ul class="menuDesplegable">
-            <li><button value="grass" class="submenu1" id="grass">Grass </button></li>
-            <li><button value="fire" class="submenu1" id="fire">Fire </button></li>
-            <li><button value="water" class="submenu1" id="water">Water</button></li>
-            <li><button value="electric" class="submenu1" id="electric">Electric </button></li>
-            <li><button value="flying" class="submenu1" id="flying">Flying </button></li>
-            <li><button value="normal" class="submenu1" id="normal">Normal </button></li>
-            <li><button value="poison" class="submenu1" id="poison">Poison</button></li>
-            <li><button value="ice" class="submenu1" id="ice"> Ice </button></li>
-            <li><button value="fighting" class="submenu1" id="fighting">Fighting </button></li>
-            <li><button value="ground" class="submenu1" id="ground">Ground</button></li>
-            <li><button value="psychic" class="submenu1" id="psychic">Psychic </button></li>
-            <li><button value="bug" class="submenu1" id="bug">Bug </button></li>
-            <li><button value="rock" class="submenu1" id="rock">Rock </button></li>
-            <li><button value="ghost" class="submenu1" id="ghost">Ghost</button></li>
-            <li><button value="dark" class="submenu1" id="dark">Dark </button></li>
-            <li><button value="dragon" class="submenu1" id="dragon">Dragon </button></li>
-            <li><button value="steel" class="submenu1" id="steel">Steel </button></li>
-            <li><button value="fairy" class="submenu1" id="fairy">Fairy</button></li>
+            <li class="li-tipos"><button value="grass" class="submenu1" id="grass">Grass </button></li>
+            <li class="li-tipos"><button value="fire" class="submenu1" id="fire">Fire </button></li>
+            <li class="li-tipos"><button value="water" class="submenu1" id="water">Water</button></li>
+            <li class="li-tipos"><button value="electric" class="submenu1" id="electric">Electric </button></li>
+            <li class="li-tipos"><button value="flying" class="submenu1" id="flying">Flying </button></li>
+            <li class="li-tipos"><button value="normal" class="submenu1" id="normal">Normal </button></li>
+            <li class="li-tipos"><button value="poison" class="submenu1" id="poison">Poison</button></li>
+            <li class="li-tipos"><button value="ice" class="submenu1" id="ice"> Ice </button></li>
+            <li class="li-tipos"><button value="fighting" class="submenu1" id="fighting">Fighting </button></li>
+            <li class="li-tipos"><button value="ground" class="submenu1" id="ground">Ground</button></li>
+            <li class="li-tipos"><button value="psychic" class="submenu1" id="psychic">Psychic </button></li>
+            <li class="li-tipos"><button value="bug" class="submenu1" id="bug">Bug </button></li>
+            <li class="li-tipos"><button value="rock" class="submenu1" id="rock">Rock </button></li>
+            <li class="li-tipos"><button value="ghost" class="submenu1" id="ghost">Ghost</button></li>
+            <li class="li-tipos"><button value="dark" class="submenu1" id="dark">Dark </button></li>
+            <li class="li-tipos"><button value="dragon" class="submenu1" id="dragon">Dragon </button></li>
+            <li class="li-tipos"><button value="steel" class="submenu1" id="steel">Steel </button></li>
+            <li class="li-tipos"><button value="fairy" class="submenu1" id="fairy">Fairy</button></li>
           </ul>
         </li>
         <li class="buttonOrdenarAZ" id="buttonOrdenarAZ" value="sortAZ"><button>Sort A-Z</button> </li>
@@ -62,10 +62,11 @@
 
 
   <div  class= "divOpaco aparece" id="divOpaco" >
-    <div class="divBlanco" id="divBlanco"> <button id="closeEstadistica">X</button></div>
+    <div class="divBlanco" id="divBlanco"> 
+      <button id="closeEstadistica">X</button>
+      <p id="conteoTipos"></p> 
+    </div>
   </div>
 
   <script src="main.js" type="module"></script>
 </body>
-
-</html>
