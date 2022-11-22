@@ -1,0 +1,390 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body {
+    background: linear-gradient(90deg, #6652C3, #5AE6E0);
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+#titulo {
+    font-family: 'Pokemon Solid', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 10vw;
+    color: #6652C3;
+    text-shadow: 0 0 15px #6652C3, 0 0 30px #6652C3, 0 0 30px #6652C3, 0 0 30px #6652C3;
+    -webkit-text-stroke: 2px #5AE6E0;
+}
+
+#pk {
+    align-content: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    /* height: 50px; */
+}
+
+/* Contenedor de tarjetas */
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 20px;
+    margin: 0px 40px;
+}
+
+.card {
+    background-color: lightblue;
+    border-color: #130F26;
+    border-style: solid;
+    border-radius: 6px;
+    padding: 10%;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.front {
+    text-transform: capitalize;
+}
+
+.name {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+    align-content: center;
+    font-family: 'Roboto', sans-serif;
+    color: #130F26;
+}
+
+.name-card {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    align-content: center;
+    font-family: 'Roboto', sans-serif;
+    color: #130F26;
+}
+
+.pk_num {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.8em;
+}
+
+.card:hover {
+    background-color: gold;
+    box-shadow: #5AE6E0;
+    color: black;
+    font-weight: bold;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    transition: 0s;
+    filter: grayscale (0%);
+    opacity: 1;
+}
+
+/* Menú desplegable */
+.encabezado {
+    display: flex;
+    margin: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #130F26;
+}
+
+.nav {
+    display: flex;
+    max-width: auto;
+}
+
+.submenu1 {
+    border-style: none;
+    background-color: none;
+    margin-left: -35%;
+    padding: auto -10%;
+    width: 500px;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.nav li button {
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 22px;
+    text-transform: uppercase;
+    width: auto;
+    display: block;
+    background-color: #130F26;
+    border: none;
+}
+
+.nav li button:hover {
+    background-color: #6652C3;
+}
+
+.li-tipos {
+    background-color: #130F26;
+    padding-right: -20px;
+    margin-right: 0%;
+}
+
+.nav li ul {
+    display: none;
+    position: absolute;
+    /* background-color: #130F26; */
+    max-width: auto;
+}
+
+.nav li:hover>ul {
+    display: block;
+}
+
+/* Buscador------- */
+
+.buscador {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 79%;
+    top: 35px;
+    transform: translate(-50%, -50%);
+    background: #f5f5f5;
+    padding: 6px;
+    height: 40px;
+    border-radius: 40px;
+}
+
+.inputBuscar {
+    background: none;
+    border: none;
+    outline: none;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font: 10px;
+    float: right;
+    line-height: 60px;
+    transition: 0.3s;
+    width: 0;
+}
+
+.botonBuscador {
+
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: gray;
+    font-size: 25px;
+}
+
+/* Para que sea responsivo el buscador */
+
+@media screen and (min-width:330px) {
+    .buscador {
+        padding: 1px;
+        padding: 1px;
+    }
+
+    .botonBuscador {
+        font-size: 20px;
+        width: 40px;
+        height: 20px;
+        margin-left: 18%;
+    }
+
+    .buscador:hover>.inputBuscar {
+        width: 190px;
+    }
+
+    .modal-container,
+    .divOpaco {
+        overflow-y: hidden;
+    }
+
+    .modal,
+    .divBlanco {
+        height: auto;
+        width: auto;
+    }
+
+    .nav li button {
+        padding: 10px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:690px) {
+
+    .buscador {
+        top: 90px;
+        left: 50%;
+        padding: 1px;
+        padding: 1px;
+    }
+
+    .botonBuscador {
+        font-size: 20px;
+        width: 40px;
+        height: 20px;
+        margin-left: 18%;
+    }
+
+    .buscador:hover>.inputBuscar {
+        width: 190px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .buscador:hover>.inputBuscar {
+        width: 300px;
+    }
+}
+
+
+/* Para los modales  */
+
+.modal-container,
+.divOpaco {
+    box-sizing: content-box;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: opacity 0.3s ease;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.modal-container.show,
+.divOpaco.show {
+    pointer-events: auto;
+    opacity: 1;
+    box-sizing: border-box;
+}
+
+.modal,
+.divBlanco {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 15px 30px;
+    width: 600px;
+    max-width: 100%;
+    margin: 0;
+    padding: 12px 28px;
+    max-height: 100%;
+}
+
+.close {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    size: 0px;
+    border: none;
+    background-color: #6652C3;
+    border-radius: 6px;
+    padding: 10px 10px;
+    color: #f5f5f5;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.open {
+    border: none;
+    background-color: #6652C3;
+    border-radius: 6px;
+    padding: 10px;
+    color: #f5f5f5;
+    padding: 12px 18px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.open:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.28), 0 17px 50px 0 rgba(0, 0, 0, 0.22);
+}
+
+
+.modalInfo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 8px;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+
+.modalInfoEstats {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button,
+.icon-seach {
+    cursor: pointer;
+}
+
+.img {
+    text-align: center;
+}
+
+.text-modal {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.name-modal {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 5vh;
+    font-weight: bold;
+    color: #6652C3;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 0;
+    top: -15px;
+    position: relative;
+}
+
+.statTitle {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 4vh;
+    font-weight: bold;
+    text-align: center;
+}
+
+.size {
+    display: flex;
+}
+
+.ataqueClass {
+    text-align: left;
+}
+
+#closeEstadistica {
+    border: none;
+    background-color: #6652C3;
+    border-radius: 6px;
+    color: #f5f5f5;
+    padding: 12px 18px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
