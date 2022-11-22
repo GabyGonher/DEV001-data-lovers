@@ -11,10 +11,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
   <script src="https://kit.fontawesome.com/fbde85969b.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="imagenes/Pokebola2.png">
 </head>
 
 <body>
   <header>
+    <!-- Menú que contiene los botones -->
     <div class="encabezado">
       <ul class="nav">
         <li class="bandeja"><button>Type</button>
@@ -42,32 +44,38 @@
         <li class="buttonOrdenarAZ" id="buttonOrdenarAZ" value="sortAZ"><button>Sort A-Z</button> </li>
         <li class="buttonOrdenarZA" id="buttonOrdenarZA" value="sortZA"><button>Sort Z-A</button> </li>
         <li id="btnEstadistica"><button>Statistics</button> </li>
-        <div class="buscador">
-          <input type="text" id="inputBuscar" class="inputBuscar" placeholder="Buscar" required>
-          <a ref="#" class="botonBuscador">
-            <i class="icon-search"> </i> 
-          </a>
-        </div>
       </ul>
     </div>
   </header>
 
+  <!-- Título de la página "Pokedex" -->
   <section id="titulo">
-    <div id="pk">Pokedex</div>
+    <div id="pk">Pokédex</div>
   </section>
 
+  <!-- Buscador -->
+  <div class="buscador">
+    <input type="text" id="inputBuscar" class="inputBuscar" placeholder="Buscar" required>
+    <a ref="#" class="botonBuscador">
+      <i class="icon-search"> </i>
+    </a>
+  </div>
 
+  <!-- Contenedor de tarjetas-->
   <div class="contenedor" id="cardList" filter="none"> </div>
+
+  <!-- Modal de información -->
   <div id="divParaModal" class="divParaModal"> </div>
 
-
-  <div  class= "divOpaco aparece" id="divOpaco" >
-    <div class="divBlanco" id="divBlanco"> 
+  <!-- Modal de estadísticas -->
+  <div class="divOpaco aparece" id="divOpaco">
+    <div class="divBlanco" id="divBlanco">
       <button id="closeEstadistica">X</button>
-      <p id="conteoTipos"></p> 
+      <p id="conteoTipos"></p>
     </div>
   </div>
 
   <script src="main.js" type="module"></script>
 </body>
+
 </html>

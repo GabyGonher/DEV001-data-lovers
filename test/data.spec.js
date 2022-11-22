@@ -281,7 +281,7 @@ describe("reduceType", () => {
     expect(typeof reduceType).toBe("function");
   });
 
-  it("deberia retornar un objeto con propiedades y valor", () => {
+  it('deberia retornar un objeto con propiedades y valor', () => {
     expect(reduceType(arrayParaTest)).toEqual(objReduce);
   });
 
